@@ -1,4 +1,3 @@
-note_id,text,task,completed
 401,"VM left; awaiting callback to complete IQ.",Intake Call,0
 402,"IQ received; CNF sent to client.",Intake Call,1
 403,"Completed intake call; SIG captured on IQ.",Intake Call,1
