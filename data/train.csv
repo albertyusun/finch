@@ -1,0 +1,401 @@
+note_id,text,task,completed
+1,"CNF on ELP verified; CNF emailed.",Sign Engagement Letter,1
+2,"Waiting on MRI to finalize DML.",Create Demand,0
+3,"Reminder: ELP still unsigned.",Sign Engagement Letter,0
+4,"Paralegal PTO noted in CMS.",none,0
+5,"Left VM for routine check-in.",Client Check-in,0
+6,"Follow-up: MRQ incomplete, missing DOB.",Request Medical Records,0
+7,"System DOC cleanup in CMS.",none,0
+8,"Completed two-week check-in; added PTN.",Client Check-in,1
+9,"Draft MRQ; waiting on SIG.",Request Medical Records,0
+10,"SIG on ELP verified; CNF emailed.",Sign Engagement Letter,1
+11,"Hospital shipped MRX.",Request Medical Records,1
+12,"Team lunch Friday.",none,0
+13,"IQ received; CNF sent to client.",Intake Call,1
+14,"FUP executed; client stable.",Client Check-in,1
+15,"Drafted MRQ; waiting on SIG.",Request Medical Records,0
+16,"Completed intake call; SIG captured on IQ.",Intake Call,1
+17,"Updated SOL tracker.",none,0
+18,"ELP uploaded to CMS.",Sign Engagement Letter,1
+19,"Draft DML ready; needs totals before DPK.",Create Demand,0
+20,"Need client to finish IQ.",Intake Call,0
+21,"Check-in pending; awaiting VM return.",Client Check-in,0
+22,"Draft DML ready; needs totals before DPK.",Create Demand,0
+23,"Faxed MRQ; got CNF.",Request Medical Records,1
+24,"Sent VM; awaiting callback to complete IQ.",Intake Call,0
+25,"Sent certified DML; CNF received.",Create Demand,1
+26,"VM left; awaiting callback to complete IQ.",Intake Call,0
+27,"Assembled DPK; attorney review pending.",Create Demand,0
+28,"Weekly KPI exported to DOC.",none,0
+29,"Client rescheduled check-in; update FUP.",Client Check-in,0
+30,"Waiting on MRI to finalize DML.",Create Demand,0
+31,"Drafted MRQ; waiting on SIG.",Request Medical Records,0
+32,"SIG on ELP verified; CNF emailed.",Sign Engagement Letter,1
+33,"Scheduled intake call; VM sent.",Intake Call,0
+34,"Assembled DPK; attorney review pending.",Create Demand,0
+35,"Hospital shipped MRX.",Request Medical Records,1
+36,"Received executed ELP.",Sign Engagement Letter,1
+37,"Updated SOL tracker.",none,0
+38,"CNF on ELP verified; CNF emailed.",Sign Engagement Letter,1
+39,"Follow-up: MRQ incomplete, missing DOB.",Request Medical Records,0
+40,"Completed two-week check-in; added PTN.",Client Check-in,1
+41,"Sent ELP via DocuSign; awaiting SIG.",Sign Engagement Letter,0
+42,"Waiting on MRI to finalize DML.",Create Demand,0
+43,"Faxed MRQ; got CNF.",Request Medical Records,1
+44,"Client rescheduled check-in; update FUP.",Client Check-in,0
+45,"Need client to finish IQ.",Intake Call,0
+46,"VM left; awaiting callback to complete IQ.",Intake Call,0
+47,"Drafted MRQ; waiting on SIG.",Request Medical Records,0
+48,"ELP uploaded to CMS.",Sign Engagement Letter,1
+49,"Draft DML ready; needs totals before DPK.",Create Demand,0
+50,"Paralegal PTO noted in CMS.",none,0
+51,"Check-in pending; awaiting VM return.",Client Check-in,0
+52,"CNF on ELP verified; CNF emailed.",Sign Engagement Letter,1
+53,"Hospital shipped MRX.",Request Medical Records,1
+54,"Completed intake call; SIG captured on IQ.",Intake Call,1
+55,"Reminder: ELP still unsigned.",Sign Engagement Letter,0
+56,"Sent VM; awaiting callback to complete IQ.",Intake Call,0
+57,"Assembled DPK; attorney review pending.",Create Demand,0
+58,"System DOC cleanup in CMS.",none,0
+59,"Waiting on MRI to finalize DML.",Create Demand,0
+60,"Client rescheduled check-in; update FUP.",Client Check-in,0
+61,"Drafted MRQ; waiting on SIG.",Request Medical Records,0
+62,"Received executed ELP.",Sign Engagement Letter,1
+63,"Updated SOL tracker.",none,0
+64,"Completed two-week check-in; added PTN.",Client Check-in,1
+65,"IQ received; CNF sent to client.",Intake Call,1
+66,"Draft DML ready; needs totals before DPK.",Create Demand,0
+67,"VM left; awaiting callback to complete IQ.",Intake Call,0
+68,"Faxed MRQ; got CNF.",Request Medical Records,1
+69,"Team lunch Friday.",none,0
+70,"Sent certified DML; CNF received.",Create Demand,1
+71,"Need client to finish IQ.",Intake Call,0
+72,"SIG on ELP verified; CNF emailed.",Sign Engagement Letter,1
+73,"Follow-up: MRQ incomplete, missing DOB.",Request Medical Records,0
+74,"Check-in pending; awaiting VM return.",Client Check-in,0
+75,"Assembled DPK; attorney review pending.",Create Demand,0
+76,"ELP uploaded to CMS.",Sign Engagement Letter,1
+77,"Hospital shipped MRX.",Request Medical Records,1
+78,"Scheduled intake call; VM sent.",Intake Call,0
+79,"CNF on ELP verified; CNF emailed.",Sign Engagement Letter,1
+80,"Draft MRQ; waiting on SIG.",Request Medical Records,0
+81,"Completed two-week check-in; added PTN.",Client Check-in,1
+82,"Paralegal PTO noted in CMS.",none,0
+83,"Waiting on MRI to finalize DML.",Create Demand,0
+84,"Reminder: ELP still unsigned.",Sign Engagement Letter,0
+85,"VM left; awaiting callback to complete IQ.",Intake Call,0
+86,"Drafted MRQ; waiting on SIG.",Request Medical Records,0
+87,"Team lunch Friday.",none,0
+88,"Assembled DPK; attorney review pending.",Create Demand,0
+89,"Hospital shipped MRX.",Request Medical Records,1
+90,"Sent ELP via DocuSign; awaiting SIG.",Sign Engagement Letter,0
+91,"Updated SOL tracker.",none,0
+92,"Client rescheduled check-in; update FUP.",Client Check-in,0
+93,"Draft DML ready; needs totals before DPK.",Create Demand,0
+94,"Check-in pending; awaiting VM return.",Client Check-in,0
+95,"Completed intake call; SIG captured on IQ.",Intake Call,1
+96,"CNF on ELP verified; CNF emailed.",Sign Engagement Letter,1
+97,"Follow-up: MRQ incomplete, missing DOB.",Request Medical Records,0
+98,"Completed two-week check-in; added PTN.",Client Check-in,1
+99,"Waiting on MRI to finalize DML.",Create Demand,0
+100,"SIG on ELP verified; CNF emailed.",Sign Engagement Letter,1
+101,"VM left; awaiting callback to complete IQ.",Intake Call,0
+102,"IQ received; CNF sent to client.",Intake Call,1
+103,"Completed intake call; SIG captured on IQ.",Intake Call,1
+104,"Need client to finish IQ.",Intake Call,0
+105,"Scheduled intake call; VM sent.",Intake Call,0
+106,"CNF on IQ verified; CNF emailed.",Intake Call,1
+107,"VM left; awaiting callback to complete IQ.",Intake Call,0
+108,"IQ received; CNF sent to client.",Intake Call,1
+109,"Reminder: ELP still unsigned.",Sign Engagement Letter,0
+110,"SIG on ELP verified; CNF emailed.",Sign Engagement Letter,1
+111,"Sent ELP via DocuSign; awaiting SIG.",Sign Engagement Letter,0
+112,"ELP uploaded to CMS.",Sign Engagement Letter,1
+113,"Received executed ELP.",Sign Engagement Letter,1
+114,"SIG on ELP verified; CNF emailed.",Sign Engagement Letter,1
+115,"Sent ELP via DocuSign; awaiting SIG.",Sign Engagement Letter,0
+116,"Reminder: ELP still unsigned.",Sign Engagement Letter,0
+117,"Drafted MRQ; waiting on SIG.",Request Medical Records,0
+118,"Faxed MRQ; got CNF.",Request Medical Records,1
+119,"Hospital shipped MRX.",Request Medical Records,1
+120,"Follow-up: MRQ incomplete, missing DOB.",Request Medical Records,0
+121,"Uploaded MRX to CMS.",Request Medical Records,1
+122,"Drafted MRQ; waiting on SIG.",Request Medical Records,0
+123,"Faxed MRQ; got CNF.",Request Medical Records,1
+124,"Hospital shipped MRX.",Request Medical Records,1
+125,"Left VM for routine check-in.",Client Check-in,0
+126,"Completed two-week check-in; added PTN.",Client Check-in,1
+127,"Check-in pending; awaiting VM return.",Client Check-in,0
+128,"Client rescheduled check-in; update FUP.",Client Check-in,0
+129,"FUP executed; client stable.",Client Check-in,1
+130,"Completed two-week check-in; added PTN.",Client Check-in,1
+131,"Left VM for routine check-in.",Client Check-in,0
+132,"Check-in pending; awaiting VM return.",Client Check-in,0
+133,"Draft DML ready; needs totals before DPK.",Create Demand,0
+134,"Sent certified DML; CNF received.",Create Demand,1
+135,"Waiting on MRI to finalize DML.",Create Demand,0
+136,"Assembled DPK; attorney review pending.",Create Demand,0
+137,"DPK approved; mailing today.",Create Demand,1
+138,"Sent certified DML; CNF received.",Create Demand,1
+139,"Draft DML ready; needs totals before DPK.",Create Demand,0
+140,"Waiting on MRI to finalize DML.",Create Demand,0
+141,"Updated SOL tracker.",none,0
+142,"System DOC cleanup in CMS.",none,0
+143,"Team lunch Friday.",none,0
+144,"Paralegal PTO noted in CMS.",none,0
+145,"Weekly KPI exported to DOC.",none,0
+146,"Audit entry saved to CMS.",none,0
+147,"Internal training notes stored in DOC.",none,0
+148,"Case reassignment notice logged in CMS.",none,0
+149,"System DOC cleanup in CMS.",none,0
+150,"Updated SOL tracker.",none,0
+151,"Team lunch Friday.",none,0
+152,"Weekly KPI exported to DOC.",none,0
+153,"Paralegal PTO noted in CMS.",none,0
+154,"Audit entry saved to CMS.",none,0
+155,"Internal training notes stored in DOC.",none,0
+156,"Case reassignment notice logged in CMS.",none,0
+157,"Updated SOL tracker.",none,0
+158,"System DOC cleanup in CMS.",none,0
+159,"Team lunch Friday.",none,0
+160,"Weekly KPI exported to DOC.",none,0
+161,"Paralegal PTO noted in CMS.",none,0
+162,"Audit entry saved to CMS.",none,0
+163,"Internal training notes stored in DOC.",none,0
+164,"Case reassignment notice logged in CMS.",none,0
+165,"Updated SOL tracker.",none,0
+166,"System DOC cleanup in CMS.",none,0
+167,"Team lunch Friday.",none,0
+168,"Weekly KPI exported to DOC.",none,0
+169,"Paralegal PTO noted in CMS.",none,0
+170,"Audit entry saved to CMS.",none,0
+171,"Internal training notes stored in DOC.",none,0
+172,"Case reassignment notice logged in CMS.",none,0
+173,"Updated SOL tracker.",none,0
+174,"System DOC cleanup in CMS.",none,0
+175,"Team lunch Friday.",none,0
+176,"Weekly KPI exported to DOC.",none,0
+177,"Paralegal PTO noted in CMS.",none,0
+178,"Audit entry saved to CMS.",none,0
+179,"Internal training notes stored in DOC.",none,0
+180,"Case reassignment notice logged in CMS.",none,0
+181,"Updated SOL tracker.",none,0
+182,"System DOC cleanup in CMS.",none,0
+183,"Team lunch Friday.",none,0
+184,"Weekly KPI exported to DOC.",none,0
+185,"Paralegal PTO noted in CMS.",none,0
+186,"Audit entry saved to CMS.",none,0
+187,"Internal training notes stored in DOC.",none,0
+188,"Case reassignment notice logged in CMS.",none,0
+189,"Updated SOL tracker.",none,0
+190,"System DOC cleanup in CMS.",none,0
+191,"Team lunch Friday.",none,0
+192,"Weekly KPI exported to DOC.",none,0
+193,"Paralegal PTO noted in CMS.",none,0
+194,"Audit entry saved to CMS.",none,0
+195,"Internal training notes stored in DOC.",none,0
+196,"Case reassignment notice logged in CMS.",none,0
+197,"Updated SOL tracker.",none,0
+198,"System DOC cleanup in CMS.",none,0
+199,"Team lunch Friday.",none,0
+200,"Weekly KPI exported to DOC.",none,0
+201,"VM left; awaiting callback to complete IQ.",Intake Call,0
+202,"IQ received; CNF sent to client.",Intake Call,1
+203,"Completed intake call; SIG captured on IQ.",Intake Call,1
+204,"Need client to finish IQ.",Intake Call,0
+205,"Scheduled intake call; VM sent.",Intake Call,0
+206,"SIG on ELP verified; CNF emailed.",Sign Engagement Letter,1
+207,"Sent ELP via DocuSign; awaiting SIG.",Sign Engagement Letter,0
+208,"Reminder: ELP still unsigned.",Sign Engagement Letter,0
+209,"ELP uploaded to CMS.",Sign Engagement Letter,1
+210,"Received executed ELP.",Sign Engagement Letter,1
+211,"Drafted MRQ; waiting on SIG.",Request Medical Records,0
+212,"Faxed MRQ; got CNF.",Request Medical Records,1
+213,"Hospital shipped MRX.",Request Medical Records,1
+214,"Follow-up: MRQ incomplete, missing DOB.",Request Medical Records,0
+215,"Uploaded MRX to CMS.",Request Medical Records,1
+216,"Left VM for routine check-in.",Client Check-in,0
+217,"Completed two-week check-in; added PTN.",Client Check-in,1
+218,"Check-in pending; awaiting VM return.",Client Check-in,0
+219,"Client rescheduled check-in; update FUP.",Client Check-in,0
+220,"FUP executed; client stable.",Client Check-in,1
+221,"Draft DML ready; needs totals before DPK.",Create Demand,0
+222,"Sent certified DML; CNF received.",Create Demand,1
+223,"Waiting on MRI to finalize DML.",Create Demand,0
+224,"Assembled DPK; attorney review pending.",Create Demand,0
+225,"DPK approved; mailing today.",Create Demand,1
+226,"VM left; awaiting callback to complete IQ.",Intake Call,0
+227,"IQ received; CNF sent to client.",Intake Call,1
+228,"Completed intake call; SIG captured on IQ.",Intake Call,1
+229,"Need client to finish IQ.",Intake Call,0
+230,"Scheduled intake call; VM sent.",Intake Call,0
+231,"SIG on ELP verified; CNF emailed.",Sign Engagement Letter,1
+232,"Sent ELP via DocuSign; awaiting SIG.",Sign Engagement Letter,0
+233,"Reminder: ELP still unsigned.",Sign Engagement Letter,0
+234,"ELP uploaded to CMS.",Sign Engagement Letter,1
+235,"Received executed ELP.",Sign Engagement Letter,1
+236,"Drafted MRQ; waiting on SIG.",Request Medical Records,0
+237,"Faxed MRQ; got CNF.",Request Medical Records,1
+238,"Hospital shipped MRX.",Request Medical Records,1
+239,"Follow-up: MRQ incomplete, missing DOB.",Request Medical Records,0
+240,"Uploaded MRX to CMS.",Request Medical Records,1
+241,"Left VM for routine check-in.",Client Check-in,0
+242,"Completed two-week check-in; added PTN.",Client Check-in,1
+243,"Check-in pending; awaiting VM return.",Client Check-in,0
+244,"Client rescheduled check-in; update FUP.",Client Check-in,0
+245,"FUP executed; client stable.",Client Check-in,1
+246,"Draft DML ready; needs totals before DPK.",Create Demand,0
+247,"Sent certified DML; CNF received.",Create Demand,1
+248,"Waiting on MRI to finalize DML.",Create Demand,0
+249,"Assembled DPK; attorney review pending.",Create Demand,0
+250,"DPK approved; mailing today.",Create Demand,1
+251,"Updated SOL tracker.",none,0
+252,"System DOC cleanup in CMS.",none,0
+253,"Team lunch Friday.",none,0
+254,"Paralegal PTO noted in CMS.",none,0
+255,"Weekly KPI exported to DOC.",none,0
+256,"Audit entry saved to CMS.",none,0
+257,"Internal training notes stored in DOC.",none,0
+258,"Case reassignment notice logged in CMS.",none,0
+259,"Updated SOL tracker.",none,0
+260,"System DOC cleanup in CMS.",none,0
+261,"Team lunch Friday.",none,0
+262,"Paralegal PTO noted in CMS.",none,0
+263,"Weekly KPI exported to DOC.",none,0
+264,"Audit entry saved to CMS.",none,0
+265,"Internal training notes stored in DOC.",none,0
+266,"Case reassignment notice logged in CMS.",none,0
+267,"Updated SOL tracker.",none,0
+268,"System DOC cleanup in CMS.",none,0
+269,"Team lunch Friday.",none,0
+270,"Weekly KPI exported to DOC.",none,0
+271,"VM left; awaiting callback to complete IQ.",Intake Call,0
+272,"IQ received; CNF sent to client.",Intake Call,1
+273,"Completed intake call; SIG captured on IQ.",Intake Call,1
+274,"Need client to finish IQ.",Intake Call,0
+275,"Scheduled intake call; VM sent.",Intake Call,0
+276,"SIG on ELP verified; CNF emailed.",Sign Engagement Letter,1
+277,"Sent ELP via DocuSign; awaiting SIG.",Sign Engagement Letter,0
+278,"Reminder: ELP still unsigned.",Sign Engagement Letter,0
+279,"ELP uploaded to CMS.",Sign Engagement Letter,1
+280,"Received executed ELP.",Sign Engagement Letter,1
+281,"Drafted MRQ; waiting on SIG.",Request Medical Records,0
+282,"Faxed MRQ; got CNF.",Request Medical Records,1
+283,"Hospital shipped MRX.",Request Medical Records,1
+284,"Follow-up: MRQ incomplete, missing DOB.",Request Medical Records,0
+285,"Uploaded MRX to CMS.",Request Medical Records,1
+286,"Left VM for routine check-in.",Client Check-in,0
+287,"Completed two-week check-in; added PTN.",Client Check-in,1
+288,"Check-in pending; awaiting VM return.",Client Check-in,0
+289,"Client rescheduled check-in; update FUP.",Client Check-in,0
+290,"FUP executed; client stable.",Client Check-in,1
+291,"Draft DML ready; needs totals before DPK.",Create Demand,0
+292,"Sent certified DML; CNF received.",Create Demand,1
+293,"Waiting on MRI to finalize DML.",Create Demand,0
+294,"Assembled DPK; attorney review pending.",Create Demand,0
+295,"DPK approved; mailing today.",Create Demand,1
+296,"Audit entry saved to CMS.",none,0
+297,"Internal training notes stored in DOC.",none,0
+298,"Case reassignment notice logged in CMS.",none,0
+299,"Updated SOL tracker.",none,0
+300,"System DOC cleanup in CMS.",none,0
+301,"VM left; awaiting callback to complete IQ.",Intake Call,0
+302,"IQ received; CNF sent to client.",Intake Call,1
+303,"Completed intake call; SIG captured on IQ.",Intake Call,1
+304,"Need client to finish IQ.",Intake Call,0
+305,"Scheduled intake call; VM sent.",Intake Call,0
+306,"SIG on ELP verified; CNF emailed.",Sign Engagement Letter,1
+307,"Sent ELP via DocuSign; awaiting SIG.",Sign Engagement Letter,0
+308,"Reminder: ELP still unsigned.",Sign Engagement Letter,0
+309,"ELP uploaded to CMS.",Sign Engagement Letter,1
+310,"Received executed ELP.",Sign Engagement Letter,1
+311,"Drafted MRQ; waiting on SIG.",Request Medical Records,0
+312,"Faxed MRQ; got CNF.",Request Medical Records,1
+313,"Hospital shipped MRX.",Request Medical Records,1
+314,"Follow-up: MRQ incomplete, missing DOB.",Request Medical Records,0
+315,"Uploaded MRX to CMS.",Request Medical Records,1
+316,"Left VM for routine check-in.",Client Check-in,0
+317,"Completed two-week check-in; added PTN.",Client Check-in,1
+318,"Check-in pending; awaiting VM return.",Client Check-in,0
+319,"Client rescheduled check-in; update FUP.",Client Check-in,0
+320,"FUP executed; client stable.",Client Check-in,1
+321,"Draft DML ready; needs totals before DPK.",Create Demand,0
+322,"Sent certified DML; CNF received.",Create Demand,1
+323,"Waiting on MRI to finalize DML.",Create Demand,0
+324,"Assembled DPK; attorney review pending.",Create Demand,0
+325,"DPK approved; mailing today.",Create Demand,1
+326,"Updated SOL tracker.",none,0
+327,"System DOC cleanup in CMS.",none,0
+328,"Team lunch Friday.",none,0
+329,"Paralegal PTO noted in CMS.",none,0
+330,"Weekly KPI exported to DOC.",none,0
+331,"Audit entry saved to CMS.",none,0
+332,"Internal training notes stored in DOC.",none,0
+333,"Case reassignment notice logged in CMS.",none,0
+334,"Updated SOL tracker.",none,0
+335,"System DOC cleanup in CMS.",none,0
+336,"VM left; awaiting callback to complete IQ.",Intake Call,0
+337,"IQ received; CNF sent to client.",Intake Call,1
+338,"Completed intake call; SIG captured on IQ.",Intake Call,1
+339,"Need client to finish IQ.",Intake Call,0
+340,"Scheduled intake call; VM sent.",Intake Call,0
+341,"SIG on ELP verified; CNF emailed.",Sign Engagement Letter,1
+342,"Sent ELP via DocuSign; awaiting SIG.",Sign Engagement Letter,0
+343,"Reminder: ELP still unsigned.",Sign Engagement Letter,0
+344,"ELP uploaded to CMS.",Sign Engagement Letter,1
+345,"Received executed ELP.",Sign Engagement Letter,1
+346,"Drafted MRQ; waiting on SIG.",Request Medical Records,0
+347,"Faxed MRQ; got CNF.",Request Medical Records,1
+348,"Hospital shipped MRX.",Request Medical Records,1
+349,"Follow-up: MRQ incomplete, missing DOB.",Request Medical Records,0
+350,"Uploaded MRX to CMS.",Request Medical Records,1
+351,"Left VM for routine check-in.",Client Check-in,0
+352,"Completed two-week check-in; added PTN.",Client Check-in,1
+353,"Check-in pending; awaiting VM return.",Client Check-in,0
+354,"Client rescheduled check-in; update FUP.",Client Check-in,0
+355,"FUP executed; client stable.",Client Check-in,1
+356,"Draft DML ready; needs totals before DPK.",Create Demand,0
+357,"Sent certified DML; CNF received.",Create Demand,1
+358,"Waiting on MRI to finalize DML.",Create Demand,0
+359,"Assembled DPK; attorney review pending.",Create Demand,0
+360,"DPK approved; mailing today.",Create Demand,1
+361,"Updated SOL tracker.",none,0
+362,"System DOC cleanup in CMS.",none,0
+363,"Team lunch Friday.",none,0
+364,"Paralegal PTO noted in CMS.",none,0
+365,"Weekly KPI exported to DOC.",none,0
+366,"Audit entry saved to CMS.",none,0
+367,"Internal training notes stored in DOC.",none,0
+368,"Case reassignment notice logged in CMS.",none,0
+369,"Updated SOL tracker.",none,0
+370,"System DOC cleanup in CMS.",none,0
+371,"VM left; awaiting callback to complete IQ.",Intake Call,0
+372,"IQ received; CNF sent to client.",Intake Call,1
+373,"Completed intake call; SIG captured on IQ.",Intake Call,1
+374,"Need client to finish IQ.",Intake Call,0
+375,"Scheduled intake call; VM sent.",Intake Call,0
+376,"SIG on ELP verified; CNF emailed.",Sign Engagement Letter,1
+377,"Sent ELP via DocuSign; awaiting SIG.",Sign Engagement Letter,0
+378,"Reminder: ELP still unsigned.",Sign Engagement Letter,0
+379,"ELP uploaded to CMS.",Sign Engagement Letter,1
+380,"Received executed ELP.",Sign Engagement Letter,1
+381,"Drafted MRQ; waiting on SIG.",Request Medical Records,0
+382,"Faxed MRQ; got CNF.",Request Medical Records,1
+383,"Hospital shipped MRX.",Request Medical Records,1
+384,"Follow-up: MRQ incomplete, missing DOB.",Request Medical Records,0
+385,"Uploaded MRX to CMS.",Request Medical Records,1
+386,"Left VM for routine check-in.",Client Check-in,0
+387,"Completed two-week check-in; added PTN.",Client Check-in,1
+388,"Check-in pending; awaiting VM return.",Client Check-in,0
+389,"Client rescheduled check-in; update FUP.",Client Check-in,0
+390,"FUP executed; client stable.",Client Check-in,1
+391,"Draft DML ready; needs totals before DPK.",Create Demand,0
+392,"Sent certified DML; CNF received.",Create Demand,1
+393,"Waiting on MRI to finalize DML.",Create Demand,0
+394,"Assembled DPK; attorney review pending.",Create Demand,0
+395,"DPK approved; mailing today.",Create Demand,1
+396,"Updated SOL tracker.",none,0
+397,"System DOC cleanup in CMS.",none,0
+398,"Team lunch Friday.",none,0
+399,"Paralegal PTO noted in CMS.",none,0
+400,"Weekly KPI exported to DOC.",none,0
