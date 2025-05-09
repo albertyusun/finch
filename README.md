@@ -1,14 +1,40 @@
 # Finch ML-Eng Take-Home — Task & Status Classifier
 
-## Results: 
+## Approach
 
-### Model info: 
-As suggested, we used the `distilbert-base-uncased` model from HuggingFace.
+As suggested, I fine-tuned `distilbert-base-uncased` model from HF with a **multitask setup** on the 400 datapoints:
+- **Shared encoder**: DistilBERT processes the input text.
+- **Two classifier heads**:
+  - 6-way task classification (`task`)
+  - 2-way status classification (`status`)
+- Loss = task loss + status loss (`CrossEntropy`)
+Training took 82.58 seconds to train the model on 400 datapoints. I used a basic VM from Google Cloud with machine type e2-medium (2 vCPUs, 4 GB Memory).
 
-### Time / compute:
-Takes 82.579 seconds to train the model on 400 datapoints. I used a basic VM from Google Cloud with machine type e2-medium (2 vCPUs, 4 GB Memory).
+---
 
-### Overall Metrics
+## Evaluation
+
+I used `score.py` for:
+- **Task Accuracy** (string match)
+- **Status Accuracy** (with `2 → 0` mapping for fair comparison)
+
+Key metrics:
+- **Task Accuracy**: 1.0000
+- **Status Accuracy (2→0)**: 1.0000
+
+Classification reports show perfect precision/recall across all classes.
+
+---
+
+## With More Time
+
+With more time, I'd do the following:
+- Train with real `status = 2` examples
+- Tune hyperparameters & use stratified K-fold CV
+- Experiment with larger models (`bert-base`, `roberta`)
+- Add uncertainty-aware predictions
+
+## Overall Metrics
 | Metric | Value |
 |--------|-------|
 | **Task Accuracy** | **1.0000** |
