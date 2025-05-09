@@ -86,10 +86,6 @@ Status Classification Report (after mapping 2->0):
 weighted avg       1.00      1.00      1.00       100
 ```
 
----
-
-<sub><i>All scores are rounded to two decimal places where applicable.</i></sub>
-
 <details>
 <summary>Original Task</summary>
 
