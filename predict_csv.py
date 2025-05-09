@@ -15,25 +15,39 @@ import sys
 
 import pandas as pd
 
-# Add necessary imports here
+import torch
+import os
+from transformers import AutoTokenizer, AutoModel
+from utils import TASK_LABELS, STATUS_LABELS, clean
+
+from multitask_model import MultiTaskModel
 
 # --- Load Model and Tokenizer ---
 model_dir = "models"
 # Implement loading your trained model and tokenizer from model_dir
-print(f"Placeholder: Implement model/tokenizer loading from ./{model_dir}/")
+tokenizer = AutoTokenizer.from_pretrained(model_dir)
+
+model = MultiTaskModel()
+model.encoder = AutoModel.from_pretrained(model_dir)
+
+# Load heads
+model.load_state_dict(torch.load(os.path.join(model_dir, "multitask_heads.pt"), map_location="cpu"))
+model.eval()
 
 # --- Prediction Logic ---
 def predict(texts):
     """Takes a list of texts and returns predicted task labels and status codes."""
     print(f"Placeholder: Received {len(texts)} texts for prediction.")
     # Implement prediction using the loaded model and tokenizer
+    cleaned = [clean(t) for t in texts]
+    encodings = tokenizer(cleaned, return_tensors="pt", padding=True, truncation=True, max_length=64)
 
-    # Placeholder output (replace with actual predictions)
-    num_texts = len(texts)
-    task_preds = ["none"] * num_texts      # Replace with predicted task strings
-    status_code_preds = [0] * num_texts  # Replace with predicted status codes (0, 1, or 2)
+    with torch.no_grad():
+        task_logits, status_logits = model(encodings['input_ids'], encodings['attention_mask'])
+    task_preds = task_logits.argmax(dim=1).tolist()
+    task_preds = [TASK_LABELS[i] for i in task_preds]
+    status_code_preds = status_logits.argmax(dim=1).tolist()
 
-    print("Placeholder: Returning dummy predictions.")
     return task_preds, status_code_preds
 
 def main(src, dst):

@@ -1,5 +1,41 @@
 # Finch ML-Eng Take-Home — Task & Status Classifier
 
+## Results: 
+
+### Overall Metrics
+| Metric | Value |
+|--------|-------|
+| **Task Accuracy** | **1.0000** |
+| **Status Accuracy**<br>(after mapping `not_sure [2] → not_completed [0]`) | **1.0000** |
+
+---
+
+### Task Classification Report
+| Task Label | Precision | Recall | F1-Score | Support |
+|------------|-----------|--------|----------|---------|
+| Client Check-in            | 1.00 | 1.00 | 1.00 | 15 |
+| Create Demand              | 1.00 | 1.00 | 1.00 | 15 |
+| Intake Call                | 1.00 | 1.00 | 1.00 | 15 |
+| Request Medical Records    | 1.00 | 1.00 | 1.00 | 15 |
+| Sign Engagement Letter     | 1.00 | 1.00 | 1.00 | 15 |
+| none                       | 1.00 | 1.00 | 1.00 | 25 |
+| **Macro Avg**              | **1.00** | **1.00** | **1.00** | **100** |
+| **Weighted Avg**           | **1.00** | **1.00** | **1.00** | **100** |
+
+---
+
+### Status Classification Report *(after mapping 2 → 0)*
+| Status Label | Precision | Recall | F1-Score | Support |
+|--------------|-----------|--------|----------|---------|
+| 0 (not_completed) | 1.00 | 1.00 | 1.00 | 64 |
+| 1 (completed)     | 1.00 | 1.00 | 1.00 | 36 |
+| **Macro Avg**     | **1.00** | **1.00** | **1.00** | **100** |
+| **Weighted Avg**  | **1.00** | **1.00** | **1.00** | **100** |
+
+---
+
+<sub><i>All scores are rounded to two decimal places where applicable.</i></sub>
+
 <details>
 <summary>Original Task</summary>
 
