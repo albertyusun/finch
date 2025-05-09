@@ -43,7 +43,7 @@ Classification reports generated using `score.py` (shown below) show perfect F1 
 
 Key metrics: Normally, for a classification task like this, I typically care most about F1-score to understand how strong a model is. If a model is shown to have a weak F1-score, I use precision, recall, and FPR / FNR to debug performance of a model. 
 
-Key metrics analysis: For our task, I didn't have to do much debugging for our model, because we achieved 100% F1 score for each category and overall.
+Key metrics analysis: For status, I didn't have to do much debugging for our model, because we achieved 100% F1 score for each category and overall. For task, the F1 scores for Sign Engagement Letter and none tell me that there are false negatives that I should manually investigate.
 
 ---
 
