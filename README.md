@@ -1,5 +1,8 @@
 # Finch ML-Eng Take-Home — Task & Status Classifier
 
+<details>
+<summary>Original Task</summary>
+
 ## The Task
 
 Your goal is to build and train a model that predicts two things based on the text of a paralegal's note:
@@ -46,6 +49,8 @@ You are provided with:
 Good luck!
 
 ---
+
+</details>
 
 ## How to run
 
