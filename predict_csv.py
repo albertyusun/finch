@@ -15,10 +15,12 @@ import sys
 
 import pandas as pd
 
+import torch.nn.functional as F
+
 import torch
 import os
 from transformers import AutoTokenizer, AutoModel
-from utils import TASK_LABELS, STATUS_LABELS, clean
+from utils import TASK_LABELS, STATUS_LABELS, clean, IMPUTE_UNCLEAR
 
 from multitask_model import MultiTaskModel
 
@@ -27,7 +29,12 @@ model_dir = "models"
 # Implement loading your trained model and tokenizer from model_dir
 tokenizer = AutoTokenizer.from_pretrained(model_dir)
 
-model = MultiTaskModel()
+if IMPUTE_UNCLEAR:
+    num_status = 3
+else:
+    num_status = 2
+
+model = MultiTaskModel(num_status_labels=num_status)
 model.encoder = AutoModel.from_pretrained(model_dir)
 
 # Load heads
@@ -35,20 +42,29 @@ model.load_state_dict(torch.load(os.path.join(model_dir, "multitask_heads.pt"), 
 model.eval()
 
 # --- Prediction Logic ---
-def predict(texts):
-    """Takes a list of texts and returns predicted task labels and status codes."""
-    print(f"Placeholder: Received {len(texts)} texts for prediction.")
-    # Implement prediction using the loaded model and tokenizer
+def predict(texts, threshold=0.9):
+    """Predicts task (string) and status (0, 1, or 2 using confidence thresholding)."""
     cleaned = [clean(t) for t in texts]
     encodings = tokenizer(cleaned, return_tensors="pt", padding=True, truncation=True, max_length=64)
 
     with torch.no_grad():
         task_logits, status_logits = model(encodings['input_ids'], encodings['attention_mask'])
-    task_preds = task_logits.argmax(dim=1).tolist()
-    task_preds = [TASK_LABELS[i] for i in task_preds]
-    status_code_preds = status_logits.argmax(dim=1).tolist()
 
-    return task_preds, status_code_preds
+    # Task predictions
+    task_preds = task_logits.argmax(dim=1).tolist()
+    task_labels = [TASK_LABELS[i] for i in task_preds]
+
+    # Status predictions using confidence threshold
+    probs = F.softmax(status_logits, dim=1)
+    confidence, prediction = probs.max(dim=1)
+    entropy = -(probs * probs.log()).sum(dim=1)  # shape: (batch_size,)
+
+    status_preds = [
+        2 if ent.item() > threshold else pred.item()
+        for ent, pred in zip(entropy, prediction)
+    ]
+
+    return task_labels, status_preds
 
 def main(src, dst):
     # 1. Load Data

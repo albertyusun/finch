@@ -11,6 +11,7 @@ TASK_LABELS = [
     "none",
 ]
 STATUS_LABELS = ["complete", "not_completed", "not_sure"]
+IMPUTE_UNCLEAR = False
 
 tokenizer = AutoTokenizer.from_pretrained("prajjwal1/bert-tiny")
 

@@ -16,7 +16,7 @@ import pandas as pd
 
 from multitask_model import MultiTaskModel
 
-from utils import TASK_LABELS, STATUS_LABELS, clean
+from utils import TASK_LABELS, STATUS_LABELS, clean, IMPUTE_UNCLEAR
 from sklearn.model_selection import train_test_split
 
 import torch
@@ -53,7 +53,22 @@ class NotesDataset(Dataset):
         item['status_label'] = self.status_labels[idx]
         return item
 
+def map_status(row):
+    text = row["text"].lower()
 
+    if row["completed"] == 1:
+        return 0
+
+    # Keywords indicating unclear/incomplete status (label = 2)
+    unsure_keywords = [
+        "awaiting", "pending", "waiting", "left vm", "reminder",
+        "needs", "need to", "requires", "client to finish", "check-in pending"
+    ]
+
+    if any(k in text for k in unsure_keywords):
+        return 2
+
+    return 1
 
 # --- Training Logic ---
 def main(csv_path):
@@ -80,7 +95,10 @@ def main(csv_path):
     df['task_label'] = df['task'].map(task_to_id)
 
     # Convert completed column -> status label index (0 or 1)
-    df["status_label"] = df["completed"].astype(int)
+    if IMPUTE_UNCLEAR:
+        df['status_label'] = df.apply(map_status, axis=1)
+    else:
+        df["status_label"] = df["completed"].astype(int)
 
     # 3. Split Data (Optional but Recommended)
     # Implement train/validation split
@@ -96,7 +114,12 @@ def main(csv_path):
 
     # 4. Define Model
     # Instantiate your model architecture
-    model = MultiTaskModel()
+    if IMPUTE_UNCLEAR:
+        num_status = 3
+    else:
+        num_status = 2
+
+    model = MultiTaskModel(num_status_labels=num_status)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model.to(device)
 
