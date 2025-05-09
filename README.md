@@ -9,27 +9,21 @@ As suggested, I fine-tuned `distilbert-base-uncased` model from HF with a **mult
   - 2-way status classification (`status`)
 - Loss = task loss + status loss (`CrossEntropy`)
 
+Why did I choose this model?
+
+Multitask learning allows the model to share linguistic representations across both labels, improving generalization while reducing compute overhead. [Caruana 1997](https://link.springer.com/article/10.1023/A:1007379606734). To do this, I used two independent heads to give the model flexibility to model the differing semantics and class sizes of `task` vs. `status`. This set up has been well established by awhile, see [Liu 2019](https://arxiv.org/pdf/1901.11504).
+
 Training took 82.58 seconds to train the model on 400 datapoints. I used a basic VM from Google Cloud with machine type e2-medium (2 vCPUs, 4 GB Memory).
 
 ---
 
 ## Evaluation
 
-I used `score.py` for:
-- **Task Accuracy** (string match)
-- **Status Accuracy** (with `2 → 0` mapping for fair comparison)
+Classification reports generated using `score.py` (shown below) show perfect F1 scores and accuracy across all classes. 
 
-Key metrics:
-- **Task Accuracy**: 1.0000
-- **Status Accuracy (2→0)**: 1.0000
+Key metrics: Normally, for a classification task like this, I typically care most about F1-score to understand how strong a model is. If a model is shown to have a weak F1-score, I use precision, recall, and FPR / FNR to debug performance of a model. 
 
-Classification reports (shown below) show perfect precision/recall across all classes.
-
-Normally, for a classification task like this, I typically care most about F1-score to understand how strong a model is.
-
-I use precision, recall, and FPR / FNR to debug performance of a model if a model is shown to have a weak F1-score.
-
-However, for our task, I didn't have to do much analysis for our experiments, because we achieved 100% F1 score for each category and overall.
+Key metrics analysis: For our task, I didn't have to do much debugging for our model, because we achieved 100% F1 score for each category and overall.
 
 ---
 
