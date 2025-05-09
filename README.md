@@ -2,6 +2,12 @@
 
 ## Results: 
 
+### Model info: 
+As suggested, we used the `distilbert-base-uncased` model from HuggingFace.
+
+### Time / compute:
+Takes 82.579 seconds to train the model on 400 datapoints. I used a basic VM from Google Cloud with machine type e2-medium (2 vCPUs, 4 GB Memory).
+
 ### Overall Metrics
 | Metric | Value |
 |--------|-------|
