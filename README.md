@@ -15,6 +15,26 @@ Multitask learning allows the model to share linguistic representations across b
 
 Training took 82.58 seconds to train the model on 400 datapoints. I used a basic VM from Google Cloud with machine type e2-medium (2 vCPUs, 4 GB Memory).
 
+Finally, how did I model uncertainty (the unsure 2 label) in status prediction? To capture ambiguity in legal task status, I experimented with three approaches for predicting the not_sure class:
+
+1. Keyword-based heuristics:
+I manually labeled training examples as not_sure if they contained vague terms (e.g., "awaiting", "needs", "reminder"). This approach resulted in very low F1 score for status (0.3).
+
+2. Confidence thresholding:
+I used the model's max softmax probability over classes 0 and 1 as a proxy for certainty, labeling low-confidence outputs as not_sure. This approach overfit to phrasing and mislabeled clearly complete tasks, such as:
+
+"Completed intake call; SIG captured on IQ." → wrongly labeled as not_sure; this is clearly a certain example
+
+3. Entropy-based uncertainty (the one I went with):
+I computed entropy over the softmax distribution and labeled predictions as not_sure when entropy exceeded a threshold. This method better aligned with human judgment — for instance:
+
+"Faxed MRQ; got CNF." and "DPK approved; mailing today."
+were reasonably flagged as ambiguous, as they suggest progress but not definitive task completion.
+
+Overall, entropy-based thresholding offered a more principled and interpretable way to identify uncertain cases and avoided many of the false positives triggered by brittle heuristics.
+
+Nonetheless, after some threshold-tuning, we don't get any 2 ("uncertain") examples in our ultimate prediction, because using a higher entropy threshold results in the highest F1 score (1).
+
 ---
 
 ## Evaluation
@@ -30,17 +50,15 @@ Key metrics analysis: For our task, I didn't have to do much debugging for our m
 ## With More Time
 
 With more time, I'd do the following:
-- Train with real `status = 2` examples
-- Tune hyperparameters & use stratified K-fold CV
+- Train with real `status = 2` examples; I'd label the data for examples where the status actually looks uncertain based on the notes.
 - Experiment with larger models (`bert-base`, `roberta`)
-- Add uncertainty-aware predictions
 
 ## Overall Metrics
 
 ```
 --- Scoring Results ---
 
-Task Prediction Accuracy: 1.0000
+Task Prediction Accuracy: 0.9700
 Task Classification Report:
                          precision    recall  f1-score   support
 
@@ -48,12 +66,12 @@ Task Classification Report:
           Create Demand       1.00      1.00      1.00        15
             Intake Call       1.00      1.00      1.00        15
 Request Medical Records       1.00      1.00      1.00        15
- Sign Engagement Letter       1.00      1.00      1.00        15
-                   none       1.00      1.00      1.00        25
+ Sign Engagement Letter       1.00      0.80      0.89        15
+                   none       0.89      1.00      0.94        25
 
-               accuracy                           1.00       100
-              macro avg       1.00      1.00      1.00       100
-           weighted avg       1.00      1.00      1.00       100
+               accuracy                           0.97       100
+              macro avg       0.98      0.97      0.97       100
+           weighted avg       0.97      0.97      0.97       100
 
 
 Status Prediction Accuracy (mapping predicted 'not_sure' [2] to 'not_completed' [0]): 1.0000
