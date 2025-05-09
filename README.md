@@ -8,6 +8,7 @@ As suggested, I fine-tuned `distilbert-base-uncased` model from HF with a **mult
   - 6-way task classification (`task`)
   - 2-way status classification (`status`)
 - Loss = task loss + status loss (`CrossEntropy`)
+
 Training took 82.58 seconds to train the model on 400 datapoints. I used a basic VM from Google Cloud with machine type e2-medium (2 vCPUs, 4 GB Memory).
 
 ---
@@ -22,7 +23,13 @@ Key metrics:
 - **Task Accuracy**: 1.0000
 - **Status Accuracy (2→0)**: 1.0000
 
-Classification reports show perfect precision/recall across all classes.
+Classification reports (shown below) show perfect precision/recall across all classes.
+
+Normally, for a classification task like this, I typically care most about F1-score to understand how strong a model is.
+
+I use precision, recall, and FPR / FNR to debug performance of a model if a model is shown to have a weak F1-score.
+
+However, for our task, I didn't have to do much analysis for our experiments, because we achieved 100% F1 score for each category and overall.
 
 ---
 
@@ -35,34 +42,37 @@ With more time, I'd do the following:
 - Add uncertainty-aware predictions
 
 ## Overall Metrics
-| Metric | Value |
-|--------|-------|
-| **Task Accuracy** | **1.0000** |
-| **Status Accuracy**<br>(after mapping `not_sure [2] → not_completed [0]`) | **1.0000** |
 
----
+```
+--- Scoring Results ---
 
-### Task Classification Report
-| Task Label | Precision | Recall | F1-Score | Support |
-|------------|-----------|--------|----------|---------|
-| Client Check-in            | 1.00 | 1.00 | 1.00 | 15 |
-| Create Demand              | 1.00 | 1.00 | 1.00 | 15 |
-| Intake Call                | 1.00 | 1.00 | 1.00 | 15 |
-| Request Medical Records    | 1.00 | 1.00 | 1.00 | 15 |
-| Sign Engagement Letter     | 1.00 | 1.00 | 1.00 | 15 |
-| none                       | 1.00 | 1.00 | 1.00 | 25 |
-| **Macro Avg**              | **1.00** | **1.00** | **1.00** | **100** |
-| **Weighted Avg**           | **1.00** | **1.00** | **1.00** | **100** |
+Task Prediction Accuracy: 1.0000
+Task Classification Report:
+                         precision    recall  f1-score   support
 
----
+        Client Check-in       1.00      1.00      1.00        15
+          Create Demand       1.00      1.00      1.00        15
+            Intake Call       1.00      1.00      1.00        15
+Request Medical Records       1.00      1.00      1.00        15
+ Sign Engagement Letter       1.00      1.00      1.00        15
+                   none       1.00      1.00      1.00        25
 
-### Status Classification Report *(after mapping 2 → 0)*
-| Status Label | Precision | Recall | F1-Score | Support |
-|--------------|-----------|--------|----------|---------|
-| 0 (not_completed) | 1.00 | 1.00 | 1.00 | 64 |
-| 1 (completed)     | 1.00 | 1.00 | 1.00 | 36 |
-| **Macro Avg**     | **1.00** | **1.00** | **1.00** | **100** |
-| **Weighted Avg**  | **1.00** | **1.00** | **1.00** | **100** |
+               accuracy                           1.00       100
+              macro avg       1.00      1.00      1.00       100
+           weighted avg       1.00      1.00      1.00       100
+
+
+Status Prediction Accuracy (mapping predicted 'not_sure' [2] to 'not_completed' [0]): 1.0000
+Status Classification Report (after mapping 2->0):
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00        64
+           1       1.00      1.00      1.00        36
+
+    accuracy                           1.00       100
+   macro avg       1.00      1.00      1.00       100
+weighted avg       1.00      1.00      1.00       100
+```
 
 ---
 
